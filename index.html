@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>FAIK ESTATE｜取引先様専用 物件情報</title>
+<style>
+:root{--navy:#1f3864;--or:#c55a11;--ink:#1d2433;--sub:#5b6478;--bg:#f6f8fb}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{font-family:"Hiragino Sans","Noto Sans JP",sans-serif;background:var(--bg);color:var(--ink)}
+#view{position:fixed;inset:0;width:100%;height:100%;border:0;display:none;background:#fff}
+.top{min-height:100%;display:flex;flex-direction:column}
+header{background:var(--navy);color:#fff;padding:18px 16px}
+header b{font-size:20px;letter-spacing:2px}
+header small{display:block;font-size:11px;opacity:.8;margin-top:4px}
+main{flex:1;display:flex;align-items:center;justify-content:center;padding:24px 16px}
+.card{max-width:440px;width:100%;background:#fff;border-radius:10px;padding:28px 22px;box-shadow:0 2px 10px rgba(0,0,0,.06);text-align:center;line-height:1.8}
+.card h1{font-size:17px;color:var(--navy);margin-bottom:10px}
+.card p{font-size:13px;color:var(--sub)}
+.card .tel{margin-top:16px;font-size:14px;color:var(--ink)}
+.card .tel a{color:var(--or);font-weight:700;text-decoration:none}
+footer{text-align:center;font-size:11px;color:var(--sub);padding:14px}
+</style>
+</head>
+<body>
+<iframe id="view" title="物件情報" allow="clipboard-write"></iframe>
+<div class="top" id="top">
+  <header><b>FAIK ESTATE</b><small>取引先様専用　最新物件情報　株式会社Signs</small></header>
+  <main><div class="card">
+    <h1>取引先様専用のページです</h1>
+    <p>毎朝お届けしているメールのリンクからお入りください。<br>リンクは貴社ごとに異なります。</p>
+    <p class="tel">お問い合わせ：株式会社Signs 川又<br>携帯 <a href="tel:09088220007">090-8822-0007</a></p>
+  </div></main>
+  <footer>© 株式会社Signs</footer>
+</div>
+<script>
+(function(){
+  var APP = 'https://script.google.com/macros/s/AKfycby-oUmox6MjGmJLluRVFN1ZA9Je1vfZf72vq7MvsJE6x4Tkvy-UnBN6JU4xoH3izw/exec';
+  var t = (new URLSearchParams(location.search).get('t') || '').replace(/[^0-9a-f]/g, '');
+  if (!t) return;
+  var f = document.getElementById('view');
+  f.src = APP + '?t=' + t;
+  f.style.display = 'block';
+  document.getElementById('top').style.display = 'none';
+})();
+</script>
+</body>
+</html>
